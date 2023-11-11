@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        password: root1234
+        url: jdbc:mysql://cms-ims.ct9htvyez5bx.us-east-1.rds.amazonaws.com:3306/ims
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        show-sql: true
