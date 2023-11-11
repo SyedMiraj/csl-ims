@@ -5,6 +5,7 @@ spring:
         username: root
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect
+        generate-ddl: true
         show-sql: true
 
 eureka:
