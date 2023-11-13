@@ -7,6 +7,9 @@ spring:
         database-platform: org.hibernate.dialect.MySQL8Dialect
         generate-ddl: true
         show-sql: true
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
 
 eureka:
     client:
