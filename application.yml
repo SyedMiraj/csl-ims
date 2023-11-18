@@ -14,7 +14,7 @@ spring:
             allow-credentials: true
             allowed-headers: '*'
             allowed-methods: GET,POST,PUT,DELETE
-            allowed-origins: http://localhost:9002
+            allowed-origins: *
             max-age: 3600
 eureka:
     client:
