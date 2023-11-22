@@ -1,21 +1,21 @@
 spring:
-    datasource:
-        password: root1234
-        url: jdbc:mysql://cms-ims.ct9htvyez5bx.us-east-1.rds.amazonaws.com:3306/ims
-        username: root
-    jpa:
-        database-platform: org.hibernate.dialect.MySQL8Dialect
-        generate-ddl: true
-        show-sql: true
-    mvc:
-        pathmatch:
-            matching-strategy: ant_path_matcher
-            
+  datasource:
+    password: ${DB_PASS:root1234}
+    url: ${DB_URL:jdbc:mysql://cms-ims.ct9htvyez5bx.us-east-1.rds.amazonaws.com:3306/ims}
+    username: ${DB_USER:root}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
 eureka:
-    client:
-        register-with-eureka: true
-        fetch-registry: true
-        service-url:
-            defaultZone: http://localhost:8761/eureka/
-    instance:
-        hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
+  instance:
+    hostname: ${EUREKA_SERVER:localhost}
