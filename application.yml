@@ -1,8 +1,8 @@
 spring:
   datasource:
-    password: ${DB_PASS:root1234}
-    url: ${DB_URL:jdbc:mysql://cms-ims.ct9htvyez5bx.us-east-1.rds.amazonaws.com:3306/ims}
-    username: ${DB_USER:root}
+    password: password
+    url: jdbc:mysql://localhost:3306/db
+    username: user
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     generate-ddl: true
@@ -16,6 +16,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: ${EUREKA_SERVER:localhost}
+    hostname: localhost
